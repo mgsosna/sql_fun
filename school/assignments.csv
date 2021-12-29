@@ -1,0 +1,6 @@
+﻿category,name,due_date,weight
+homework,ch_1-5,2021-09-15,0.1
+homework,ch_6-10,2021-10-15,0.1
+exam,midterm,2021-11-01,0.2
+project,biography,2021-12-01,0.25
+exam,final,2022-01-15,0.35
