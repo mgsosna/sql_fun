@@ -44,7 +44,6 @@ VALUES
     ('Evan');
 
 
-
 DROP TABLE IF EXISTS assignments CASCADE;
 CREATE TABLE assignments (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -53,6 +52,7 @@ CREATE TABLE assignments (
     due_date DATE,
     weight FLOAT
 );
+
 
 DROP TABLE IF EXISTS grades CASCADE;
 CREATE TABLE grades (
@@ -79,3 +79,27 @@ COPY grades(assignment_id, score, student_id)
 FROM 'C:/Users/mgsosna/Desktop/db_data/grades.csv'
 DELIMITER ','
 CSV HEADER;
+
+
+ALTER TABLE students
+ADD best_friend_id INT;
+
+UPDATE students
+SET best_friend_id = 5
+WHERE id = 1;
+
+UPDATE students
+SET best_friend_id = 4
+WHERE id = 2;
+
+UPDATE students
+SET best_friend_id = 2
+WHERE id = 3;
+
+UPDATE students
+SET best_friend_id = 2
+WHERE id = 4;
+
+UPDATE students
+SET best_friend_id = 1
+WHERE id = 5;
