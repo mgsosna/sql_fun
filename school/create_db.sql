@@ -69,12 +69,13 @@ CREATE TABLE grades (
 );
 
 
+/* Replace the FROM line with the path to your CSV */
 COPY assignments(category, name, due_date, weight)
 FROM 'C:/Users/mgsosna/Desktop/db_data/assignments.csv'
 DELIMITER ','
 CSV HEADER;
 
-
+/* Replace the FROM line with the path to your CSV */
 COPY grades(assignment_id, score, student_id)
 FROM 'C:/Users/mgsosna/Desktop/db_data/grades.csv'
 DELIMITER ','
